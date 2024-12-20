@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color:#138065;
+    --bg-light-color:linear-gradient(to right, #299fc7 , #72ece3);
+    --text-color1: #555;
+    --text-color2: #000;
+    --text-color3: #fff;
+    --text-hover:#ff523b ;
+    }
+body{
+    line-height: 1.6;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    z-index: 9;
+    left: 0;
+    position: fixed;
+    height: 75px;
+    top: 0;
+  background: var(--bg-color);
+  }
+  .logo{
+  position: absolute;
+  top: 0;
+  }
+  .logo img{
+    width: 205px;
+    height: 75px;
+    object-fit: cover;
+    filter:drop-shadow(1px 2px 1px #000000 );
+  }
+  nav{
+    flex: 1;
+    text-align: right;
+  }
+  nav ul{
+    display: inline-block;
+    transition: .5s all ease;
+    list-style-type: none;
+  }
+  nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: var(--text-color3);
+    transition: .4s ease;
+  }
+
+  
+  nav ul li a:hover{
+    color: var(--text-hover);
+  }
+  #menu-subscribe-btn{
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    color: var(--text-color3);
+    border: 0;
+    outline: none;
+    transition: .4s ease;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.546);
+    padding: 8px 18px;
+    background: var(--text-color2);
+  }#menu-subscribe-btn:hover{
+     background: var(--bg-light-color);
+box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.541);
+  color: var(--bg-color);
+}
+
+.menu-icon{
+    width: 25px;
+    display: none;
+    margin-left: 15px;
+  }
+/*Here start likns Part */
+main{
+    margin-top: 80px;
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#search-input{
+   width: 60%;
+   max-width: 400px;
+   padding: 10px 20px;
+   border: none;
+   outline: none;
+   box-shadow: 0 0 6px rgb(0, 0, 0.2);
+   border-radius: 5px;
+   font-size: 18px;
+   color: #333;
+}
+#search-input:hover{
+    box-shadow: 0 0px 20px #00000095;
+}
+#search-input:focus-visible{
+    border-bottom: 5px solid #138065;
+}
+#search-button{
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #ececec;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 5px 5px 20px #00000095;
+    }
+    #search-button:hover{
+        box-shadow:   4px 6px 20px  #000000;
+    }
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.search-item{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 250px; /* Set a fixed height for consistency */
+    border-radius: 5px;
+    box-shadow: 0 0px 26px #0000009d;
+    overflow: hidden;
+    position: relative; /* Ensures consistent alignment */
+    transition: .4s ease;
+}
+
+.search-item:hover{
+    box-shadow: 0 10px 15px #00000095;
+}
+
+.search-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    transition: 0.2s;
+}
+.search-item:hover img{
+   opacity:.7;
+}
+.search-item:hover a{
+    bottom: 0;
+}
+.search-item a{
+    font-size: 20px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+    background: #fff4;
+    text-transform: capitalize;
+    padding: 10px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 2px 2px #000000;
+    display: block;
+}
+
+#show-more-button{
+    background-color: #138065;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow:  0 0px 14px rgb(0, 0, 0.2);
+    margin: 30px auto;
+    display: none;
+}#show-more-button:hover{
+    filter: saturate(2);
+    box-shadow:  3px 5px 14px rgb(0, 0, 0.2);
+}
+.social-icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.social-icons img{
+    width: 40px;
+    scale: .9;
+    padding: 8px;
+    transition: .4s ease;
+    border-radius: 6px;
+   background: #138065;
+   box-shadow: 0 0 15px #00000095;
+    margin-inline: 20px;
+}
+.social-icons img:hover{
+    scale: 1;
+    box-shadow: 0 5px 18px #000000;
+}
+.download-btn {
+    display: inline-block;
+    margin-top: 5px;
+    border: 0;
+    position: absolute;
+    top: -2%;
+    right: 0px;
+    padding: 8px 12px;
+    background-color: #138065;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 0 12px #00000095;
+}
+
+ footer{
+    background: var(--bg-color);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: 80px;
+    right: 0;
+    padding: 10px 60px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer h6{
+    font-size: 16px;
+    color: #fff;
+}
+footer h6 b{
+    color: var(--text-hover);
+    text-decoration: underline;
+}
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+   width: 50%;
+}
+
+footer ul li{
+    list-style: none;
+    margin: 10px 12px;
+    text-shadow: 2px 2px 3px #333;
+}
+footer ul li a:hover{
+    color: var(--text-hover);
+}
+
+
+
+ 
+
+
+
+
+@media (max-width:786px) {
+    .search-results{
+        padding: 20px;
+    }
+        .search-item {
+            width: 45%;
+            height: 200px; /* Adjust height for smaller screens */
+        }
+        footer{
+            padding: 0;
+            height: fit-content;
+           justify-content: center;
+        }
+  footer ul{
+    width: 80%;
+  }
+}
+@media (max-width:486px) {
+    .search-item {
+        width: 100%;
+        height: 200px; /* Adjust height for mobile view */
+    }
+    footer{
+        padding: 0;
+    }
+    footer ul{
+        width: 100%;
+    }
+    footer ul li{
+        margin: 0;
+        width: fit-content;
+    }
+}
